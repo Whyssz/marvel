@@ -1,0 +1,69 @@
+@import '../../style/variables.scss';
+
+.app {
+    &__banner {
+        width: 100%;
+        background-color: $dark;
+        height: 100px;
+        padding: 0 25px 0 45px;
+        display: grid;
+        grid-template-columns: 152px auto 133px;
+        align-items: center;
+        &-text {
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 32px;
+            color: #FFFFFF;
+            padding-left: 83px;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+	.app__banner{
+		grid-template-columns: repeat(3, auto);
+		justify-content: space-around;
+		padding: 0 10px;
+	}
+	.app__banner-text{
+		padding-left: 0;
+	}
+}
+@media (max-width: 700px) {
+	.app__banner {
+		img{
+			max-width: 130px;
+			height: 100%;
+			object-fit: cover;
+			width: 100%;
+		}
+	}
+	.app__banner-text {
+		font-size: 20px;
+		line-height: 27px;
+	}
+}
+@media (max-width: 900px) {
+	.app__banner {
+		grid-template-columns: repeat(2, auto);
+		justify-content: space-between;	
+			img {
+				&:nth-child(1){
+					display: none;
+				}
+			}
+	}
+}
+@media (max-width: 450px) {
+	.app__banner {
+		img {
+			height: 70%;
+			width: 100%;
+		}
+	}
+
+	.app__banner-text {
+		font-size: 15px;
+		line-height: 24px;
+	}
+}

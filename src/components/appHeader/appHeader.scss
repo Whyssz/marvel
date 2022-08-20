@@ -1,0 +1,58 @@
+@import '../../style/variables.scss';
+
+.app {
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+				align-items: center;
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 37px;
+        span {
+            color: $main-color;
+        }
+    }
+    &__menu {
+        ul {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 32px;
+            li {
+                margin: 0 8px;
+                a:hover {
+                    color: $main-color;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 700px) {
+	.app__header {
+		.app__title {
+			font-size: 20px;
+		}
+		.app__menu {
+			ul{
+				font-size: 20px;
+			}
+		}
+	}
+}
+@media (max-width: 500px) {
+	.app__header {
+		flex-direction: column;
+		justify-self: center;
+		.app__menu {
+			ul{
+				font-size: 17px;
+			}
+		}
+	}
+}

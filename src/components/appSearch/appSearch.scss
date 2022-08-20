@@ -1,0 +1,197 @@
+@import '../../style/variables.scss';
+
+.app{
+  .bord-link {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 50px);
+    margin-bottom: 10px;
+      .bord-link__char{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 15px;
+        cursor: pointer;
+        display: inline-block;
+        box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px,
+        rgb(0 0 0 / 30%) 0px 30px 60px -30px,
+        rgb(10 37 64 / 35%) 0px -2px 6px 0px inset;
+        position: relative;
+        transition: all .3s ease-in;
+        &:hover{
+          background-color: #00ff443d;
+        }
+        & img{
+          content: '';
+          background-size: cover;
+          background-position: center;
+          position: absolute;
+          width: 20px;
+          height: 28px;
+          top: 5px;
+          left: 10px;
+        }
+        &.broken-link{
+          cursor: default;
+          &:hover{
+            background-color: rgba(255, 0, 0, 0.217);
+          }
+        }
+      }
+    }
+  .result-wrapper__form-search {
+    margin-top: 25px;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 21px;
+    width: auto;
+  }
+  .result-wrapper{
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 21px;
+    margin-top: 20px;
+    .result-wrapper__search {
+      &.success-search {
+        color: $succ;
+        position: relative;
+        transition: all .3s ease-out;
+  
+        &::after {
+          opacity: 0;
+          visibility: hidden;
+          content: '';
+          position: absolute;
+          right: 200px;
+          top: -15px;
+          width: 50px;
+          height: 50px;
+          background: url('../../resources/img/fist.png');
+          background-size: cover;
+          transition: all .1s ease-out;
+        }
+  
+        &:hover {
+          margin-left: 15px;
+  
+          &::after {
+            opacity: 1;
+            visibility: visible;
+            right: -44px;
+          }
+        }
+  
+        &:focus-visible {
+          margin-left: 15px;
+  
+          &::after {
+            opacity: 1;
+            visibility: visible;
+            right: -44px;
+          }
+        }
+      }
+  
+      &.error-search {
+        color: $main-color;
+      }
+    }
+  }
+  &__form-search{
+    margin-top: 35px;
+    padding: 25px;
+    height: auto;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+    transition: all .3s ease-in;
+    h2 {
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 21px;
+    }
+  }
+  .char__search {
+    &-error {
+      margin-top: 25px;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 24px;
+      color: $main-color;
+    }
+
+    &-critical-error {
+      margin-top: 25px;
+      font-size: 20px;
+      color: inherit;
+    }
+  }
+  &__wrapper-search{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    input {
+      border: none;
+      height: 38px;
+      width: 100%;
+      display: inline-block;
+      padding: 10px;
+      font-size: 18px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      color: #000;
+      transition: all .3s ease-in;
+      outline-color: rgba(255, 255, 255, 0.093);
+      &:focus-visible{
+        // outline-color: #FFF;
+        box-shadow: 5px 5px 20px rgba(211, 22, 22, 30%);
+      }
+      &::placeholder{
+        font-weight: 400;
+        font-size: inherit;
+        line-height: 16px;
+        color: rgba(0, 0, 0, 0.5);
+      }
+    }
+    button {
+      margin-left: 25px;
+      display: inline-block;
+      min-width: 101px;
+      color: #fff;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 14px;
+      transition: 0.3s transform;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+
+      &::before {
+        content: "";
+        display: block;
+        height: 10px;
+        margin-left: 10px;
+        transition: none;
+        background-color: $main-color;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        height: 10px;
+        margin-right: 10px;
+        transition: none;
+        background-color: $main-color;
+      }
+
+      &:hover {
+        transform: translateY(0);
+      }
+
+      .inner {
+        position: relative;
+        background-color: #9F0013;
+        line-height: 18px;
+        padding: 0 18px;
+        transition: none;
+      }
+    }
+  }
+}

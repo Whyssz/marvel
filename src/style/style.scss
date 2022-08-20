@@ -1,0 +1,170 @@
+@import './variables';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+@import './button';
+
+* {
+    font-family: "Roboto Condensed", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+li,
+dl {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    &:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
+}
+body{
+    overflow-x: hidden;
+}
+.app {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 50px 30px 70px;
+	position: relative;
+	align-items: center;
+	.bg-decoration {
+		display: none;
+		position: absolute;
+		right: -174px;
+		bottom: -70px;
+		z-index: -1;
+	}
+}
+
+main {
+    margin-top: 50px;
+    position: relative;
+}
+
+.pulse {
+    animation: pulse 1.5s ease-in-out .5s infinite
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1
+    }
+    50% {
+        opacity: .4
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+//single char
+.randomize-enter{
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.randomize-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 600ms;
+}
+
+.randomize-exit {
+    opacity: 1;
+    transition: all 600ms;
+}
+
+.randomize-exit-active {    
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 600ms;
+}
+//char list
+.renchar-enter{
+    opacity: 0;
+    transform: scale(0.7) translate(0, 100%);
+}
+
+.renchar-enter-active {
+    opacity: 1;
+    transform: scale(1) translate(0);
+    transition: all 600ms;
+}
+
+.renchar-exit {
+    opacity: 1;
+    transition: all 600ms;
+}
+
+.renchar-exit-active {
+    transform: scale(0.7) translate(0, 100%);
+    opacity: 0;
+    transition: all 600ms;
+}
+
+@media (max-width: 1000px) {
+	.app{
+		padding: 30px;
+	}
+	main{
+		margin-top: 30px;
+	}
+	.button{
+		&.button__main{
+			.inner{
+				padding: 7px;
+			}
+			&::after {
+				display: none;
+			}
+		
+			&::before {
+				display: none;
+			}
+		}
+		&::after{
+			display: none;
+		}
+		&::before{
+			display: none;
+		}
+		.inner{
+			height: 30px;
+					padding: 7px;
+			&::after {
+				display: none;
+			}
+			&::before {
+				display: none;
+			}
+		}
+	}
+}
