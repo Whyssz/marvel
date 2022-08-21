@@ -35,7 +35,7 @@ const singleCharLayout = ({ data }) => {
             })}
           </div>
         </div>
-        <Link to="/" className="single-comic__back">
+        <Link to="marvel/" className="single-comic__back">
           Back to main page
         </Link>
       </div>
