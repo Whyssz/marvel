@@ -6,7 +6,7 @@ This project is taken from the course and rewritten for the new format libraries
 |Link|Description|
 |:--:|:--:|
 |[GitHub-pages](https://whyssz.github.io/marvel/)| For your comfort |
-|[Heroku](https://marvel-comics-course.herokuapp.com/)| For your comfort |
+|[Heroku](https://marvel-comics-course.herokuapp.com/marvel/)| For your comfort |
 |[Another vers](https://github.com/Whyssz/github-structure/tree/main/react/marvel)| Project without using *** |
 
 > *** - This is the initial version of the project, without the use of hooks, to show (there is a code example) that I'm familiar with react development 
